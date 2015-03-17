@@ -13,67 +13,70 @@
 
 ActiveRecord::Schema.define(version: 20150306195859) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "collaborator_contacts", force: :cascade do |t|
-    t.string   "street",          limit: 255
-    t.integer  "street_number",   limit: 4
-    t.string   "colony",          limit: 255
-    t.string   "city",            limit: 255
-    t.integer  "zip_code",        limit: 4
-    t.integer  "phone_home",      limit: 4
-    t.integer  "phone_mobile",    limit: 4
-    t.string   "email",           limit: 255
-    t.integer  "collaborator_id", limit: 4
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.string   "street"
+    t.integer  "street_number"
+    t.string   "colony"
+    t.string   "city"
+    t.integer  "zip_code"
+    t.integer  "phone_home"
+    t.integer  "phone_mobile"
+    t.string   "email"
+    t.integer  "collaborator_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "collaborator_infos", force: :cascade do |t|
-    t.string   "picture",             limit: 255
-    t.string   "relationship_status", limit: 255
-    t.decimal  "height",                          precision: 10
-    t.string   "birthplace",          limit: 255
-    t.string   "nationality",         limit: 255
-    t.integer  "collaborator_id",     limit: 4
-    t.datetime "created_at",                                     null: false
-    t.datetime "updated_at",                                     null: false
+    t.string   "picture"
+    t.string   "relationship_status"
+    t.decimal  "height"
+    t.string   "birthplace"
+    t.string   "nationality"
+    t.integer  "collaborator_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "collaborator_works", force: :cascade do |t|
-    t.string   "position",        limit: 255
-    t.string   "team",            limit: 255
-    t.decimal  "salary",                      precision: 10
-    t.string   "account",         limit: 255
-    t.string   "division",        limit: 255
-    t.string   "department",      limit: 255
-    t.string   "working_status",  limit: 255
-    t.boolean  "status",          limit: 1
-    t.integer  "collaborator_id", limit: 4
-    t.datetime "created_at",                                 null: false
-    t.datetime "updated_at",                                 null: false
+    t.string   "position"
+    t.string   "team"
+    t.decimal  "salary"
+    t.string   "account"
+    t.string   "division"
+    t.string   "department"
+    t.string   "working_status"
+    t.boolean  "status"
+    t.integer  "collaborator_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "collaborators", force: :cascade do |t|
-    t.string   "names",      limit: 255
-    t.string   "last_names", limit: 255
-    t.string   "gender",     limit: 255
+    t.string   "names"
+    t.string   "last_names"
+    t.string   "gender"
     t.date     "birthdate"
-    t.string   "curp",       limit: 255
-    t.string   "rfc",        limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "curp"
+    t.string   "rfc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
