@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  picture: 
+  relationship_status: 
+  height: 9.99
+  birthplace: 
+  nationality: 
+  collaborator_id: 
+
+two:
+  picture: 
+  relationship_status: 
+  height: 9.99
+  birthplace: 
+  nationality: 
+  collaborator_id: 

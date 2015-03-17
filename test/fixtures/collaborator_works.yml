@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  position: 
+  team: 
+  salary: 9.99
+  account: 
+  division: 
+  department: 
+  working_status: 
+  status: 
+  collaborator_id: 
+
+two:
+  position: 
+  team: 
+  salary: 9.99
+  account: 
+  division: 
+  department: 
+  working_status: 
+  status: 
+  collaborator_id: 

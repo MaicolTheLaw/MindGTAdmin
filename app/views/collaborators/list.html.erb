@@ -1,7 +1,3 @@
-<h1>Collaborators#teams</h1>
-<p>Find me in app/views/collaborators/teams.html.erb</p>
-collaborator = Collaborator.all
-
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Collaborators</h1>
@@ -15,13 +11,15 @@ collaborator = Collaborator.all
   </thead>
 
   <tbody>
-    <% @collabo.each do |f| %>
+    <% @collaboworks.each do |f| %>
       <tr>
-        <td><%= f.names %></td>
-        <td><%= f.last_names %></td>
+        <td><%= f.account %></td>
+       
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+
+

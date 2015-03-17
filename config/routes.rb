@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   get 'collaborators/single'
   get 'collaborators/teams'
+  get 'collaborators/list'
+  get 'collaborators/search'
+  #post 'collaborators/search'
 
   devise_for :users
   
@@ -13,6 +16,10 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#dashboard'
+
+  #PRUEBA PARA DEVISE BORRAR
+    #devise_for :users, controllers: {
+    #sessions: 'sessions' }
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

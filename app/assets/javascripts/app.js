@@ -475,3 +475,10 @@ $.AdminLTE.boxWidget = {
     });
   };
 }(jQuery));
+
+// Jesus code
+//$(function () {
+  //$('a').on('click',function (event) {
+   // event.preventDefault();
+  //})
+//})

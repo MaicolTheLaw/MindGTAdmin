@@ -11,7 +11,57 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150226175545) do
+ActiveRecord::Schema.define(version: 20150306195859) do
+
+  create_table "collaborator_contacts", force: :cascade do |t|
+    t.string   "street",          limit: 255
+    t.integer  "street_number",   limit: 4
+    t.string   "colony",          limit: 255
+    t.string   "city",            limit: 255
+    t.integer  "zip_code",        limit: 4
+    t.integer  "phone_home",      limit: 4
+    t.integer  "phone_mobile",    limit: 4
+    t.string   "email",           limit: 255
+    t.integer  "collaborator_id", limit: 4
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  create_table "collaborator_infos", force: :cascade do |t|
+    t.string   "picture",             limit: 255
+    t.string   "relationship_status", limit: 255
+    t.decimal  "height",                          precision: 10
+    t.string   "birthplace",          limit: 255
+    t.string   "nationality",         limit: 255
+    t.integer  "collaborator_id",     limit: 4
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
+  end
+
+  create_table "collaborator_works", force: :cascade do |t|
+    t.string   "position",        limit: 255
+    t.string   "team",            limit: 255
+    t.decimal  "salary",                      precision: 10
+    t.string   "account",         limit: 255
+    t.string   "division",        limit: 255
+    t.string   "department",      limit: 255
+    t.string   "working_status",  limit: 255
+    t.boolean  "status",          limit: 1
+    t.integer  "collaborator_id", limit: 4
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
+  end
+
+  create_table "collaborators", force: :cascade do |t|
+    t.string   "names",      limit: 255
+    t.string   "last_names", limit: 255
+    t.string   "gender",     limit: 255
+    t.date     "birthdate"
+    t.string   "curp",       limit: 255
+    t.string   "rfc",        limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
