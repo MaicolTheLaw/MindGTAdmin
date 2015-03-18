@@ -44,6 +44,9 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  ruby '2.2.1'
+
+  #Heroku integration has previously relied on using the Rails plugin system, which has been removed from Rails 4. To enable features such as static asset serving and logging on Heroku please add rails_12factor gem to your Gemfile.
+  gem 'rails_12factor', group: :production
+  ruby "2.2.1"
 end
 
