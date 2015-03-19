@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>MIND GT - Login</title>
-  <%= stylesheet_link_tag 'LoginStyle', :media => 'screen' %>
+  <%= stylesheet_link_tag 'CSS/LoginStyle', :media => 'screen' %>
   <%= csrf_meta_tags %>  
 </head>
 
@@ -36,10 +36,7 @@
   <% end %>
 </div>
 </div>
-  </body>
-
-
-  <h2>Sign up</h2>
+<h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -68,5 +65,6 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+  </body>
 </html>
 

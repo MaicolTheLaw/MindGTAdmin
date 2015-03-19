@@ -5,19 +5,20 @@ Rails.application.routes.draw do
   get 'collaborators/teams'
   get 'collaborators/list'
   get 'collaborators/search'
+  get 'employee/employee'
+  resources :employees
+  get 'test_conts/index'
+  resources :test_conts
+  get 'home/dashboard'
+  get 'layouts/devise'
+
+  root 'home#dashboard'
+   
   #post 'collaborators/search'
 
   devise_for :users
-  
-  get 'home/dashboard'
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  root 'home#dashboard'
-
-  #PRUEBA PARA DEVISE BORRAR
+ #PRUEBA PARA DEVISE BORRAR
     #devise_for :users, controllers: {
     #sessions: 'sessions' }
 
@@ -69,4 +70,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
 end

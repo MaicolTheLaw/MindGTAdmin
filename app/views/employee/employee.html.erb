@@ -1,0 +1,245 @@
+
+<div class="container">
+									<div class="row">
+
+
+										<!-- tabs left -->
+										<div class="tabbable tabs-left">
+											<ul class="nav nav-tabs">
+												<li class="active"><a href="#Profile" data-toggle="tab">Profile</a></li>
+												<li ><a href="#WorkInfo" data-toggle="tab">Work Info</a></li>
+												<li><a href="#Projects" data-toggle="tab">Projects</a></li>
+												<li><a href="#EmergencyContact" data-toggle="tab">Emergency Contact</a></li>
+												<li><a href="#Preferences" data-toggle="tab">Preferences</a></li></ul>
+
+
+
+												<div class="tab-content">
+													<div class="tab-pane active" id="Profile">
+														<div class="row">
+
+															<div class="col-md-9">
+
+																<div class="boxProfileBanner">
+																	<div class="box-dangerMod" >
+																		<div >
+																			<img src="http://images4.fanpop.com/image/answers/1930000/1930703_1314441655529.92res_291_300.jpg" class="ProfilePic"  >
+
+																			<table  class="TableProfileStyle">
+																				<tr >
+																					<td class="TopLine"></td> 
+																					<td class="TopLineRight"><b>Nickname:</b> <label>Pete</label></td> 
+																				</tr>
+
+																				<tr >
+																					<td class="TopLine">
+																					<%= @employeeName.names %>
+																						           
+																					</td>
+																					<td class="TopLineRight"><b>Birthday:</b> August 5 1992</td>
+																				</tr>
+
+																				<tr >
+																					<td class="BottomLine">
+																						Proyectos Internos
+																					</td>
+																					<td class="TopLineRight"><b>Start Date:</b> February 3 2015</td>
+																				</tr>
+
+																				<tr ><td class="TopLine"></td>  </tr>
+																			</table>
+
+																		</div>
+
+																	</div>
+																	<div class="box box-success" >
+																		<div class="box-header with-border">
+																			<i class="fa  fa-book"></i>
+																			<h3 class="box-title">About</h3>
+
+																		</div>
+																		<br>
+																		<div class="row">
+
+																			<div class="col-md-4">
+																				<div class="input-group margin">
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">Name(s)</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Insert Name(s)" value="<%= @employeeName.names%>">
+																				</div>
+
+																			</div>
+
+
+																			<div class="col-md-4">
+
+																				<div class="input-group margin">
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">Last Name</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Insert Last Names" value="<%= @employeeName.last_names%>">
+																				</div>
+
+																			</div>
+
+																			<div class="col-md-4">
+
+																				<div class="input-group margin">
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">Nickname</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Insert Nickname">
+																				</div>
+
+																			</div>
+																		</div>
+
+																		<div class="row">
+
+																			<div class="col-md-4">
+																				<div class="input-group margin">
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">Gender</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Insert Gender" value="<%= @employeeName.gender%>">
+																				</div>
+
+																			</div>
+
+
+																			<div class="col-md-4">
+
+																				<div class="input-group margin">
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">HomeTown</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Insert Hometown">
+																				</div>
+
+																			</div>
+
+																			<div class="col-md-4">
+
+																				<div class="input-group margin">
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default"><i class="fa fa-gift"></i>Birthdate:</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Insert B-Day" value="<%= @employeeName.birthdate%>">
+																				</div>
+
+																			</div>
+																		</div>
+																		<br>
+																	</div>
+
+																	<div class="box box-danger">
+																		<div class="box-header with-border">
+																			<i class="fa  fa-book"></i>
+																			<h3 class="box-title">Basic Information</h3>
+																		</div>
+																		<br>
+																		<div class="row">
+
+																			<div class="col-md-4">
+																				<div class="input-group">
+
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">RFC</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Insert RFC" value="<%= @employeeName.rfc%>">
+																				</div>
+
+																			</div>
+
+																			<div class="col-md-4">
+
+																				<div class="input-group">
+
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">CURP</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Insert CURP" value="<%= @employeeName.curp%>">
+																				</div>
+
+																			</div>
+
+																			<div class="col-md-4">
+
+																				<div class="input-group">
+
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">Start date</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Starting Date">
+																				</div>
+
+																			</div>
+
+																		</div>
+																		<br>
+
+																	</div>
+																</div>
+															</div>
+
+
+
+
+														</div>
+													</div>
+													<div class="tab-pane" id="WorkInfo">
+														2
+													</div>
+													<div class="tab-pane" id="Projects">
+														3
+													</div>
+													<div class="tab-pane" id="EmergencyContact">
+														4
+													</div>
+													<div class="tab-pane" id="Preferences">
+														5
+													</div>
+												</div>
+												<!-- /tabs -->
+
+											</div>
+
+<% unless @search.blank? %> 
+
+								<%= @search.names %>
+								<%= @search.last_names %>
+								<%= @search.id %>
+
+								<% else %>
+								lel
+								<% end %>
+
+
+										</div><!-- /row -->
+									</div>
+
+
+									<!--STOP WORKING HERE-->
+          
+              </section><!-- /.content -->
+              </div><!-- /.content-wrapper -->
+              <%= javascript_include_tag 'bootstrap' %>
+              <%= javascript_include_tag 'app' %>
+              <%= javascript_include_tag 'dashboard' %>
+              <%= javascript_include_tag 'dashboard2' %>
+              <%= javascript_include_tag 'demo' %>
+
+    <!-- jQuery 2.1.3 
+-->
+<script src="plugins/jQuery/jQuery-2.1.3.min.js"></script>
+<!-- Bootstrap 3.3.2 JS -->
+<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<!-- SlimScroll -->
+<script src="plugins/slimScroll/jquery.slimScroll.min.js" type="text/javascript"></script>
+<!-- FastClick -->
+<script src='plugins/fastclick/fastclick.min.js'></script>
+
+    <!-- AdminLTE App 
+-->
+<script src="dist/js/app.min.js" type="text/javascript"></script>

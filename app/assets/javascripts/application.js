@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require bootstrap
+//= require app
+//= require dashboard
+//= require dashboard2
+//= require demo
 //= require_tree .
