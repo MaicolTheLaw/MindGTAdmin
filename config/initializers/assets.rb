@@ -4,7 +4,7 @@
 Rails.application.config.assets.precompile += %w( CSS/bootstrap.css )
 Rails.application.config.assets.precompile += %w( CSS/AdminLTE.css )
 Rails.application.config.assets.precompile += %w( CSS/skin-Mind.css )
-Rails.application.config.assets.precompile += %w( CSS/LoginStyle.css )
+Rails.application.config.assets.precompile += %w( LoginStyle.css )
 Rails.application.config.assets.precompile += %w( bootstrap.js )
 Rails.application.config.assets.precompile += %w( dashboard.js )
 Rails.application.config.assets.precompile += %w( dashboard2.js )

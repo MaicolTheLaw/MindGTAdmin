@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'team/teamview'
+
   get 'profiles/profile'
 
   get 'collaborators/single'

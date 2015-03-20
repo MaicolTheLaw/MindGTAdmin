@@ -97,7 +97,7 @@ input {
   line-height: 50px;
   text-align: center;
   width: 50px;
-  margin: 0px !important;
+  margin: -4px !important;
 }
 
 #login form input {
@@ -106,7 +106,7 @@ input {
   margin: 0px;
 }
 
-#login form input[type="text"], input[type="password"], input[type="email"], input[placeholder], input:focus[placeholder]  {
+#login form input[type="text"], input[type="password"], input[type="email"]  {
   background-color: #3b4148;
   border-radius: 0px 3px 3px 0px;
   color: #606468;
@@ -124,6 +124,8 @@ input {
   margin-bottom: 2em;
   text-transform: uppercase;
   width: 280px;
+  margin-top: 10px;
+
 }
 
 #login form input[type="submit"]:hover {
