@@ -11,10 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150306195859) do
+ActiveRecord::Schema.define(version: 20150327195131) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "collaborator_banks", force: :cascade do |t|
+    t.string   "beneficiary_name"
+    t.string   "relationship"
+    t.string   "rfc"
+    t.string   "birthdate"
+    t.string   "adress"
+    t.integer  "collaborator_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "collaborator_benefits", force: :cascade do |t|
+    t.boolean  "gym"
+    t.string   "gym_name"
+    t.string   "company_saving"
+    t.integer  "company_saving_amount"
+    t.string   "welfare"
+    t.string   "rent_deposit"
+    t.integer  "rent_deposit_amount"
+    t.string   "rent_deposit_per_month"
+    t.string   "gasoline_help"
+    t.string   "carwash_service"
+    t.string   "housemoving_service"
+    t.integer  "collaborator_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "collaborator_contacts", force: :cascade do |t|
     t.string   "street"
@@ -41,6 +69,63 @@ ActiveRecord::Schema.define(version: 20150306195859) do
     t.datetime "updated_at",          null: false
   end
 
+  create_table "collaborator_knowledges", force: :cascade do |t|
+    t.string   "lenguajes"
+    t.string   "technologies"
+    t.integer  "collaborator_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "collaborator_pastworks", force: :cascade do |t|
+    t.string   "company"
+    t.string   "period"
+    t.string   "position"
+    t.string   "team"
+    t.integer  "salary"
+    t.string   "boss"
+    t.integer  "phone"
+    t.string   "reason_to_leave"
+    t.integer  "collaborator_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "collaborator_preferences", force: :cascade do |t|
+    t.string   "likes"
+    t.string   "dislikes"
+    t.string   "shirt_size"
+    t.string   "pants_size"
+    t.string   "religion"
+    t.integer  "collaborator_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "collaborator_projects", force: :cascade do |t|
+    t.string   "project_name"
+    t.string   "technologies"
+    t.string   "id_responsible"
+    t.date     "start_date"
+    t.date     "finish_date"
+    t.string   "position"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "collaborator_schoolinfos", force: :cascade do |t|
+    t.string   "education_level"
+    t.string   "career"
+    t.string   "technologies"
+    t.string   "languages"
+    t.string   "school_origin"
+    t.string   "school_schedule"
+    t.string   "semester"
+    t.integer  "collaborator_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
   create_table "collaborator_works", force: :cascade do |t|
     t.string   "position"
     t.string   "team"
@@ -64,6 +149,11 @@ ActiveRecord::Schema.define(version: 20150306195859) do
     t.string   "rfc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "collaborators_collaborator_projects", id: false, force: :cascade do |t|
+    t.integer "collaborator_id"
+    t.integer "collaborator_project_id"
   end
 
   create_table "users", force: :cascade do |t|

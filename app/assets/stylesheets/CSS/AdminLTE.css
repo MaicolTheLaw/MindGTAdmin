@@ -4179,6 +4179,12 @@ Gradient Background colors
 }
 
 /*-Pete's code*/ 
+.DivPeople{
+  height: 400px;
+  }
+.DivTeams{
+  height: 600px;
+  }
 tr.spaceUnder > td
 {
   padding-bottom: 1.5%;
@@ -4226,6 +4232,7 @@ h1.profile{
   border-top: 0px solid #c1c1c1;
   margin-top: 12px;
   margin-left: -36px;
+  margin-right: 12px;
   margin-bottom: 20px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -4315,4 +4322,39 @@ padding-bottom: 10px;
 vertical-align: middle;
  font-family: 'Oxygen', sans-serif;
    font-weight: 400;
+}
+  /* Define 2 column template */
+.right-side,
+.left-side {
+  min-height: 100%;
+  display: block;
+}
+
+#ex2::-webkit-scrollbar{
+width:16px;
+background-color:#f1f1f1;
+}
+#ex2::-webkit-scrollbar-thumb{
+background-color:#bcbcbc;
+border-radius:10px;
+}
+#ex2::-webkit-scrollbar-thumb:hover{
+background-color:#a7a7a7;
+border:0px solid #333333;
+}
+#ex2::-webkit-scrollbar-track{
+border:0px gray solid;
+border-radius:10px;
+-webkit-box-shadow:0 0 0px gray inset;
+}
+.pr {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #cdd0d4;
+}
+.newnavbar {
+  padding: 10px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #cdd0d4;
+  margin-bottom: 10px;
 }

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  likes: 
+  dislikes: 
+  shirt_size: 
+  pants_size: 
+  religion: 
+  collaborator_id: 
+
+two:
+  likes: 
+  dislikes: 
+  shirt_size: 
+  pants_size: 
+  religion: 
+  collaborator_id: 

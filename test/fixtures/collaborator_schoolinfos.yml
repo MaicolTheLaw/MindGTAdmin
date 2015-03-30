@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  education_level: 
+  career: 
+  technologies: 
+  languages: 
+  school_origin: 
+  school_schedule: 
+  semester: 
+  collaborator_id: 
+
+two:
+  education_level: 
+  career: 
+  technologies: 
+  languages: 
+  school_origin: 
+  school_schedule: 
+  semester: 
+  collaborator_id: 
