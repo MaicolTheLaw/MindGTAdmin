@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150327195131) do
+ActiveRecord::Schema.define(version: 20150331171348) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,18 @@ ActiveRecord::Schema.define(version: 20150327195131) do
     t.integer  "phone_home"
     t.integer  "phone_mobile"
     t.string   "email"
+    t.integer  "collaborator_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "collaborator_emergencies", force: :cascade do |t|
+    t.string   "names"
+    t.string   "last_names"
+    t.integer  "phone_home"
+    t.integer  "phone_mobile"
+    t.string   "relationship"
+    t.string   "address"
     t.integer  "collaborator_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
@@ -113,6 +125,11 @@ ActiveRecord::Schema.define(version: 20150327195131) do
     t.datetime "updated_at",     null: false
   end
 
+  create_table "collaborator_projects_collaborators", id: false, force: :cascade do |t|
+    t.integer "collaborator_id"
+    t.integer "collaborator_project_id"
+  end
+
   create_table "collaborator_schoolinfos", force: :cascade do |t|
     t.string   "education_level"
     t.string   "career"
@@ -149,11 +166,6 @@ ActiveRecord::Schema.define(version: 20150327195131) do
     t.string   "rfc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "collaborators_collaborator_projects", id: false, force: :cascade do |t|
-    t.integer "collaborator_id"
-    t.integer "collaborator_project_id"
   end
 
   create_table "users", force: :cascade do |t|

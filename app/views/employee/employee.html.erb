@@ -192,11 +192,160 @@
 														2
 													</div>
 													<div class="tab-pane" id="Projects">
-														3
+													<div class="row">
+													<div class="col-md-9">
+																	
+																	<div class="box box-success" >
+																		<div class="box-header with-border">
+																			<i class="fa  fa-book"></i>
+																			<h3 class="box-title">Emergency Contacts</h3>
+																		</div>
+
+																			<div class="col-md-4">
+																				<div class="input-group margin">
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">Name</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Name" value="<%= @employeeProjects.project_name%>" readonly>
+																				</div>
+																			</div>
+
+																			<div class="col-md-4">
+																				<div class="input-group margin">
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">Leader</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Leader" value="<%= @employeeProjects.id_responsible%>" readonly>
+																				</div>
+																			</div>
+
+																			<div class="col-md-4">
+																				<div class="input-group margin">
+																					<div class="input-group-btn">
+																					<button type="button" class="btn btn-default">Technologies</button>
+																					</div>
+																					<textarea class="form-control" rows="7"  placeholder="Technologies" readonly><%= @employeeProjects.technologies%></textarea>
+																				</div>
+																			</div>
+
+																			<div class="col-md-4">
+																				<div class="input-group margin">
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">Position</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Position" value="<%= @employeeProjects.position%>" readonly>
+																				</div>
+																			</div>
+
+																			<div class="col-md-4">
+																				<div class="input-group margin">
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">Start Date</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Start Date" value="<%= @employeeProjects.start_date%>" readonly>
+																				</div>
+																			</div>
+
+																			<div class="col-md-4">
+																				<div class="input-group margin">
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">Finish Date</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Finish Date" value="<%= @employeeProjects.finish_date%>" readonly>
+																				</div>
+																			</div>
+
+
+
+
+
+																	</div>
 													</div>
-													<div class="tab-pane" id="EmergencyContact">
-														4
 													</div>
+													</div><!-- END OF PROJECTS -->
+													
+													<div class="tab-pane" id="EmergencyContact">							
+													<div class="row">
+													<div class="col-md-9">
+																	
+																	<div class="box box-success" >
+																		<div class="box-header with-border">
+																			<i class="fa  fa-book"></i>
+																			<h3 class="box-title">Emergency Contacts</h3>
+																		</div>
+
+																			<div class="col-md-4">
+																				<div class="input-group margin">
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">Names</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Names" value="<%= @employeeEmergencies.names%>" readonly>
+																				</div>
+																			</div>
+
+																			<div class="col-md-4">
+																				<div class="input-group margin">
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">Last Names</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Last Names" value="<%= @employeeEmergencies.last_names%>" readonly>
+																				</div>
+																			</div>
+
+																			<div class="col-md-4">
+																				<div class="input-group margin">
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">Relationship</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Relationship" value="<%= @employeeEmergencies.relationship%>" readonly>
+																				</div>
+																			</div>
+
+																																			
+																			<div class="col-md-4">
+																				<div class="input-group margin">
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">Home Number</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Home Numer" value="<%= @employeeEmergencies.phone_home%>" readonly>
+																				</div>
+																			</div>
+
+																			<div class="col-md-4">
+																				<div class="input-group margin">
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">Cell Number</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Cell Number" value="<%= @employeeEmergencies.phone_mobile%>" readonly>
+																				</div>
+																			</div>
+
+																			<div class="col-md-4">
+																				<div class="input-group margin">
+																					<div class="input-group-btn">
+																						<button type="button" class="btn btn-default">Address</button>
+																					</div><!-- /btn-group -->
+																					<input class="form-control" type="text" placeholder="Address" value="<%= @employeeEmergencies.address%>" readonly>
+																				</div>
+																			</div>
+
+																	</div>
+													</div>
+													</div>
+													</div> <!-- END OF EMERGENCY -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 													<div class="tab-pane" id="Preferences">
 														<div class="row">
 
@@ -262,7 +411,8 @@
 																				</div>
 																			</div>
 
-																			
+																			</div>
+
 																			<div class="col-md-4">
 
 																				<div class="input-group margin">
@@ -273,9 +423,9 @@
 																				</div>
 
 																			</div>
-																		</div>
 
-																		<div class="row">
+
+
 
 																			<div class="col-md-4">
 																				<div class="input-group margin">
